@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %> 
+
+	<div class="container">
+		<%- include('partials/navbar.ejs') %> 
+		<div class="alert alert-success" role="alert">
+			Thank you for registration, <%- formData.name %>!
+		</div>
+		<a href="/login" class="btn btn-primary">Login</a>
+	</div>
+
+<%- include('partials/footer.ejs') %> 

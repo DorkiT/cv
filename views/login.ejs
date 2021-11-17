@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %> 
+
+<div class="container">
+	<%- include('partials/navbar.ejs') %> 
+</div>
+
+<div class="container text-center col-md-3 border rounded">
+	<h1>Login</h1>
+	<% if(error !== "") {%> 
+		<div class="alert alert-danger" role="alert">
+			<%- error %> 
+		</div>
+		<% } %> 
+		<form action="/login" class="mb-3" method="post">
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" name="email" id="email" placeholder="example@email.com" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label> 
+				<input type="password" class="form-control" name="password" id="password" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>
+		</form>
+</div>
+
+<%- include('partials/footer.ejs') %> 
